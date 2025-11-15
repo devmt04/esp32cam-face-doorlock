@@ -1,0 +1,7 @@
+opencv-python
+numpy
+pygame
+pyserial
+insightface
+onnxruntime
+python-telegram-bot==20.3

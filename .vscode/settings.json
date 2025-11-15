@@ -1,0 +1,29 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.espIdfPath": "/home/mohit/esp/esp-idf",
+  "idf.pythonInstallPath": "/usr/bin/python3",
+  "idf.openOcdConfigs": [
+    "board/esp32-wrover-kit-3.3v.cfg"
+  ],
+  "idf.port": "/dev/ttyUSB0",
+  "idf.toolsPath": "/home/mohit/.espressif",
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32"
+  },
+  "idf.flashType": "UART",
+  "files.associations": {
+    "wifi.h": "c",
+    "esp_http_server.h": "c",
+    "http.h": "c",
+    "common.h": "c",
+    "gpio.h": "c",
+    "freertos.h": "c",
+    "esp_err.h": "c",
+    "time.h": "c",
+    "random": "c",
+    "esp_camera.h": "c",
+    "esp_timer.h": "c",
+    "complex": "c",
+    "format": "c"
+  }
+}
