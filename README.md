@@ -1,32 +1,45 @@
-# _Sample project_
+# ESP32-CAM Smart Door Lock System 
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+A smart, AI-powered door lock system built using **ESP32-CAM**.  
+The device automatically unlocks the door when a **known face** is detected and sends a **Telegram alert** with a captured image when an unknown person appears.
 
-This is the simplest buildable example. The example is used by command `idf.py create-project`
-that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
+---
+
+## Project Preview
+
+![Project Preview](docs/ckt_diagram.png)
+
+---
+
+## Features
+
+- **Face Detection & Recognition** using ESP32-CAM and Python
+- **Automatic Door Unlock** for authorized individuals  
+- **Unknown Face → Send Alert** to Telegram  
+- Solenoid door-lock control  
+
+---
+
+## Hardware Requirements
+
+- ESP32-CAM
+- FTDI Programmer
+- Solenoid Lock
+- Jumper Wires
+- 5V Power Supply
+- 12V Power supply
+
+## License
+
+This project is open-source under the **MIT License**.
 
 
+## Contributing
 
-## How to use example
-We encourage the users to use the example as a template for the new projects.
-A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
+Contributions are welcome! If you have suggestions, bug reports, or improvements, feel free to open an issue or submit a pull request.
 
-## Example folder contents
+## Support My Work
 
-The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
+If you find my work useful, consider supporting me by buying me a coffee!
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
-files that provide set of directives and instructions describing the project's source files and targets
-(executable, library, or both). 
-
-Below is short explanation of remaining files in the project folder.
-
-```
-├── CMakeLists.txt
-├── main
-│   ├── CMakeLists.txt
-│   └── main.c
-└── README.md                  This is the file you are currently reading
-```
-Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
-They are not used or needed when building with CMake and idf.py.
+<a href="https://buymeacoffee.com/mohitdeoli" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
