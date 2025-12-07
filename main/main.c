@@ -23,6 +23,7 @@ void app_main(void)
         .intr_type = GPIO_INTR_DISABLE,
     };
     gpio_config(&io_conf);
+    gpio_set_level(13,  0);
     
     // create one-shot timer for GPIO 13, which will automatically turn off the LED/Buzzer/Door lock after 3 seconds
     const esp_timer_create_args_t t13_args = {

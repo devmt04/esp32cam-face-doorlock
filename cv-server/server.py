@@ -7,7 +7,6 @@ from insightface.app import FaceAnalysis # for face detection and recognition
 from telegram import Bot # for sending Telegram messages
 import asyncio         # for asynchronous operations
 
-
 pygame.init()          # initialize PyGame
 screen = pygame.display.set_mode((320, 240)) # set display size
 
@@ -52,11 +51,15 @@ def cosine_similarity(a, b):
     return np.dot(a, b)
 
 # Asynchronous function to send alert message via Telegram
-async def send_message():
+async def send_message(frame):
     BOT_TOKEN = "" # Bot Token here
     CHAT_ID = 0 #CHAT ID HERE
     bot = Bot(token=BOT_TOKEN)
-    await bot.send_message(chat_id=CHAT_ID, text="Alert! Someone else trying to enter your house.")
+    _, buffer = cv2.imencode(".jpg", frame)
+    img_bytes = buffer.tobytes()
+
+    await bot.send_photo(chat_id=CHAT_ID, photo=img_bytes)
+    # await bot.send_message(chat_id=CHAT_ID, text="Alert! Someone else trying to enter your house.")
     print("Alert sent to telegram!")
 
 
@@ -105,8 +108,7 @@ while True:
             send_uart("face_detected")
         elif (sim <= (1 - THRESHOLD))  and time.time() - last_sent > 10:
             last_sent = time.time()
-            send_uart("unauth")
-            #asyncio.run(send_message())
+            #asyncio.run(send_message(frame))
 
     show_frame(frame) # display the frame
 
